@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.exe
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.deps.json
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.runtimeconfig.json
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.dll
+C:\Users\Admin\source\repos\workToInterface\workToInterface\bin\Debug\net5.0\workToInterface.pdb
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.AssemblyInfo.cs
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.dll
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\refint\workToInterface.dll
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.pdb
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\workToInterface.genruntimeconfig.cache
+C:\Users\Admin\source\repos\workToInterface\workToInterface\obj\Debug\net5.0\ref\workToInterface.dll
