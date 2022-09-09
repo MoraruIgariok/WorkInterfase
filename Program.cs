@@ -5,16 +5,7 @@ namespace workToInterface
 {
     internal class Program
     {
-        static List<decimal> N_Figure(decimal area, decimal perimeter)
-        {
-            int SizeFigure = Convert.ToInt32(Console.ReadLine());
-            List<decimal> ResultValue = new List<decimal>(); 
-            for(int i = 0; i < SizeFigure; i++)
-            {
-                ResultValue.Add(Convert.ToInt32(Console.ReadLine()));   
-            }
-            return ResultValue;
-        }
+        
         static void Menu()
         {
             bool forLoop = true;
