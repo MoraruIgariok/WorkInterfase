@@ -8,7 +8,7 @@ namespace workToInterface
 {
     internal interface IFigure
     {
-        decimal Aria();
-        decimal Perimetru();
+        decimal Area();
+        decimal Perimeter();
     }
 }

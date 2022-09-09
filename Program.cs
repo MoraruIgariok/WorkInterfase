@@ -1,69 +1,68 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace workToInterface
 {
     internal class Program
     {
+        static List<decimal> N_Figure(decimal area, decimal perimeter)
+        {
+            int SizeFigure = Convert.ToInt32(Console.ReadLine());
+            List<decimal> ResultValue = new List<decimal>(); 
+            for(int i = 0; i < SizeFigure; i++)
+            {
+                ResultValue.Add(Convert.ToInt32(Console.ReadLine()));   
+            }
+            return ResultValue;
+        }
         static void Menu()
         {
-            Console.WriteLine("Cu ce figura lucram?");
-            string[] keyWord = { "Dreptunghi.", "Cerc.", "Patrat.", "Triunghi." };
-            int i = 0;
-            foreach(string word in keyWord)
+            bool forLoop = true;
+            while (forLoop)
             {
-                i++;
-                Console.WriteLine(i+"."+word);                
+                Console.WriteLine("\nCu ce figura lucram?\n");
+                string[] keyWord = { "Dreptunghi.", "Cerc.", "Patrat.", "Triunghi.","Quit." };
+                int i = 0;
+                foreach (string word in keyWord)
+                {
+                    i++;
+                    Console.WriteLine(i + "." + word);
+                }
+                int keys = Convert.ToInt32(Console.ReadLine());
+
+
+                switch (keys)
+                {
+                    case 1:                        
+                        IFigure rectangular = new Rectangular();
+                        Console.WriteLine("Aria dreptunghi este:{0}", rectangular.Area());
+                        Console.WriteLine("Perimetrul dreptunghi este:{0}", rectangular.Perimeter());
+                        break;
+                    case 2:
+                        IFigure cerculet = new Circle();
+                        Console.WriteLine("Aria cerc este:{0}", cerculet.Area());
+                        Console.WriteLine("Perimetrul cerc este:{0}", cerculet.Area());
+                        break;
+                    case 3:
+                        IFigure patrat = new Square();
+                        Console.WriteLine("Aria patratului este:{0}", patrat.Area());
+                        Console.WriteLine("Perimetrul patratului este:{0}", patrat.Perimeter());
+                        break;
+                    case 4:
+                        IFigure triangle = new Triangle();
+                        Console.WriteLine("Aria triunghiului este:{0}", triangle.Area());
+                        Console.WriteLine("Perimetrul triunghiului este:{0}", triangle.Perimeter());
+                        break;
+                    case 5:
+                        forLoop = false;
+                        break;
+                    default:
+                        Console.WriteLine("Asa solutii nu avem, mai incercati");
+                        break;
+
+                }
             } 
-            int s = Convert.ToInt32(Console.ReadLine());
-            switch (s)
-            {
-                case 1:
-                    Console.WriteLine("Introduceti lungimea: ");
-                    int l = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Introduceti latimea: ");
-                    int w = Convert.ToInt32(Console.ReadLine());
-                    IFigure dreptunghi = new Dreptunghi(l, w);
-                    decimal a_d = dreptunghi.Aria();
-                    Console.WriteLine("Aria dreptunghi este:{0}", a_d);
-                    decimal p_d = dreptunghi.Perimetru();
-                    Console.WriteLine("Perimetrul dreptunghi este:{0}", p_d);
-                    break;
-                case 2:
-                    Console.WriteLine("Introduceti raza: ");
-                    int r = Convert.ToInt32(Console.ReadLine());
-                    IFigure cerculet = new Cerc(r);
-                    decimal a_c = cerculet.Aria();
-                    Console.WriteLine("Aria cerc este:{0}", a_c);
-                    decimal p_c = cerculet.Perimetru();
-                    Console.WriteLine("Perimetrul cerc este:{0}", p_c);
-                    break;
-                case 3:
-                    Console.WriteLine("Introduceti lungimea: ");
-                    int latur = Convert.ToInt32(Console.ReadLine());
-                    IFigure patrat = new Patrat(latur);
-                    decimal a_l = patrat.Aria();
-                    Console.WriteLine("Aria cerc este:{0}", a_l);
-                    decimal p_l = patrat.Perimetru();
-                    Console.WriteLine("Perimetrul cerc este:{0}", p_l);
-                    break;
-                case 4:
-                    Console.WriteLine("Introduceti l1: ");
-                    int l_1 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Introduceti l2: ");
-                    int l_2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Introduceti l3: ");
-                    int l_3 = Convert.ToInt32(Console.ReadLine());
-                    IFigure triunghi = new Triunghi(l_1,l_2,l_3);
-                    decimal a_t = triunghi.Aria();
-                    Console.WriteLine("Aria cerc este:{0}", a_t);
-                    decimal p_t = triunghi.Perimetru();
-                    Console.WriteLine("Perimetrul cerc este:{0}", p_t);
-                    break;
-
-
-
-
-            }
+            
         }
         static void Main(string[] args)
         {
@@ -72,7 +71,10 @@ namespace workToInterface
 
             if(ok == "yes")
             {
+
                 Menu();
+                Console.WriteLine("------Ati iesit din sistem----");
+                Console.WriteLine("------------------------------");
             }
             else
             {
