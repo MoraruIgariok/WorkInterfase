@@ -6,34 +6,64 @@ using System.Threading.Tasks;
 
 namespace workToInterface
 {
+    public class TriangleCount
+    {
+        public int count { get; set; }  
+        public int side_1 { get; set; }
+        public int side_2 { get; set; }
+        public int side_3 { get; set; }
+
+    }
     internal class Triangle : IFigure
     {
-        int side_1;
-        int side_2;
-        int side_3;
+        List<TriangleCount> trianglesList = new List<TriangleCount>();
+      
         public Triangle()
         {
-            Console.Write("Introduceti l1: ");
-            side_1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Introduceti l2: ");
-            side_2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Introduceti l3: ");
-            side_3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Cite figuri alegeti ? ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            for(int i = 0; i < number; i++)
+            {
+                var triangle = new TriangleCount();
+                triangle.count = i;
+
+                Console.Write("Introduceti l1: ");
+                triangle.side_1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Introduceti l2: ");
+                triangle.side_2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Introduceti l3: ");
+                triangle.side_3 = Convert.ToInt32(Console.ReadLine());
+
+                trianglesList.Add(triangle);    
+            }
+            Console.Write("************************************\n");
+
         }
       
     
         public decimal Area()
         {
-            double p = (side_1 + side_2 + side_3) / 2;
-            double a =p * (p - side_1) * (p - side_2) * (p - side_3);
-            return (decimal)Math.Sqrt(a);
+            foreach(var item in trianglesList)
+            {
+                double SemiPerimetru = (item.side_1 + item.side_2 + item.side_3) / 2;
+                double totalResult = SemiPerimetru * (SemiPerimetru - item.side_1) * (SemiPerimetru - item.side_2) * (SemiPerimetru - item.side_3);
+                Console.WriteLine("Aria triunghiului {0} este {1}", item.count + 1, totalResult);
+            }
+            Console.WriteLine("------------------------------------------------------");
+            return 0;
         }
 
        
 
         public decimal Perimeter()
         {
-            return side_1 + side_2 + side_3;
+            foreach (var item in trianglesList)
+            {
+                Console.WriteLine("Perimetrul triunghiului {0} este {1}", item.count + 1, item.side_1 + item.side_2 + item.side_3);
+            }
+            Console.WriteLine("------------------------------------------------------");
+            return 0;
         }
     }
 }

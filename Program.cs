@@ -26,23 +26,23 @@ namespace workToInterface
                 {
                     case 1:                        
                         IFigure rectangular = new Rectangular();
-                        Console.WriteLine("Aria dreptunghi este:{0}", rectangular.Area());
-                        Console.WriteLine("Perimetrul dreptunghi este:{0}", rectangular.Perimeter());
+                        rectangular.Area();
+                        rectangular.Perimeter();
                         break;
                     case 2:
-                        IFigure cerculet = new Circle();
-                        Console.WriteLine("Aria cerc este:{0}", cerculet.Area());
-                        Console.WriteLine("Perimetrul cerc este:{0}", cerculet.Area());
+                        IFigure circle = new Circle();
+                        circle.Area();  
+                        circle.Perimeter();
                         break;
                     case 3:
-                        IFigure patrat = new Square();
-                        Console.WriteLine("Aria patratului este:{0}", patrat.Area());
-                        Console.WriteLine("Perimetrul patratului este:{0}", patrat.Perimeter());
+                        IFigure square = new Square();
+                        square.Area();
+                        square.Perimeter();
                         break;
                     case 4:
                         IFigure triangle = new Triangle();
-                        Console.WriteLine("Aria triunghiului este:{0}", triangle.Area());
-                        Console.WriteLine("Perimetrul triunghiului este:{0}", triangle.Perimeter());
+                        triangle.Area();
+                        triangle.Perimeter();
                         break;
                     case 5:
                         forLoop = false;
