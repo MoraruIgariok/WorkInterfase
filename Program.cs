@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace workToInterface
 {
     internal class Program
     {
-        
         static void Menu()
         {
             bool forLoop = true;
@@ -24,14 +22,14 @@ namespace workToInterface
 
                 switch (keys)
                 {
-                    case 1:                        
+                    case 1:
                         IFigure rectangular = new Rectangular();
                         rectangular.Area();
                         rectangular.Perimeter();
                         break;
                     case 2:
                         IFigure circle = new Circle();
-                        circle.Area();  
+                        circle.Area();
                         circle.Perimeter();
                         break;
                     case 3:

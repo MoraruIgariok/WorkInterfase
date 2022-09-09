@@ -6,47 +6,43 @@ using System.Threading.Tasks;
 
 namespace workToInterface
 {
-    class CountCircle
+    public class CircleCount
     {
         public int count { get; set; }  
         public int radius { get; set; }
 
         public const decimal PI = 3.14m;
-
     }
     internal class Circle : IFigure
     {
+        List<CircleCount> circlesList = new List<CircleCount>();
 
-        List<CountCircle> circlesList = new List<CountCircle>();
         public Circle()
         {
-            
-            Console.WriteLine("Cite figuri alegeti? ");
+            Console.WriteLine("Cite figuri alegeti ?");
             int number = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < number; i++)
+            for(int i =0; i < number; i++)
             {
-                var circle = new CountCircle(); 
-                
-                circle.count = i; //numarul de figuri.
+                var circle = new CircleCount();
 
+                circle.count = i;
                 Console.Write("Introduceti raza: ");
                 circle.radius = Convert.ToInt32(Console.ReadLine());
+                circlesList.Add(circle);    
 
-                circlesList.Add(circle); //adaugarea in lista.   
             }
-            Console.Write("************************************\n");
-
+            Console.WriteLine("********************************");
 
         }
 
         public decimal Area()
         {
-            foreach (var item in circlesList)
+            foreach(var item in circlesList)
             {
-                Console.WriteLine("Aria pentru cercu {0} este {1} ", item.count +1, item.radius*item.radius * CountCircle.PI);
+                Console.WriteLine("Aria cercului {0} este {1} ", item.count + 1, item.radius * item.radius * CircleCount.PI);
             }
-            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("--------------------------------------");
             return 0; 
         }
 
@@ -54,11 +50,10 @@ namespace workToInterface
         {
             foreach (var item in circlesList)
             {
-                Console.WriteLine("Perimetrul pentru cercu {0} este {1} ", item.count + 1, 2 * (item.radius * CountCircle.PI));
+                Console.WriteLine("Perimetru cercului {0} este {1} ", item.count + 1, 2 * item.radius * CircleCount.PI); 
             }
-            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("--------------------------------------");
             return 0;
-            
         }
     }
 }
