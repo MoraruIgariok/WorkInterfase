@@ -10,5 +10,7 @@ namespace workToInterface
     {
         decimal Area();
         decimal Perimeter();
+
+        void WriteFigure();
     }
 }

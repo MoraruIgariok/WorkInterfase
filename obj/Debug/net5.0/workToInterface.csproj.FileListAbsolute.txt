@@ -1,0 +1,16 @@
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.exe
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.deps.json
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.runtimeconfig.json
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.runtimeconfig.dev.json
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.dll
+C:\Igor_CSharp\NewProject\WorkInterfase\bin\Debug\net5.0\workToInterface.pdb
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.csproj.AssemblyReference.cache
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.AssemblyInfoInputs.cache
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.AssemblyInfo.cs
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.csproj.CoreCompileInputs.cache
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.dll
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\refint\workToInterface.dll
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.pdb
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\workToInterface.genruntimeconfig.cache
+C:\Igor_CSharp\NewProject\WorkInterfase\obj\Debug\net5.0\ref\workToInterface.dll

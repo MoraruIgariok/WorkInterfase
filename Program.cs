@@ -1,4 +1,4 @@
-using System;
+  using System;
 
 namespace workToInterface
 {
@@ -7,32 +7,31 @@ namespace workToInterface
         static void Menu()
         {
             bool forLoop = true;
-            while (forLoop)
-            {
-	            /// В цикле есть функционал заполнения одной фигуры.
-	            /// Можешь вынести функционал получение одной фигуры без вывода в отдельный метод? Пример IFigure WriteFigure();
-	            /// До вызова метоода спрашиваешь сколько раз его вызвать = количество фигур которые я хочу ввести
-	            /// Собрать результат выполнения метода в один массив-лист.
-	            /// Вывести плошадь и периметр всех элементов массива.
+             while (forLoop)
+            {	           
                 Console.WriteLine("\nCu ce figura lucram?\n");
-                string[] keyWord = { "Dreptunghi.", "Cerc.", "Patrat.", "Triunghi.","Quit." };
-                int i = 0;
+                
+                string[] keyWord = { "Dreptunghi.", "Cerc.", "Patrat.", "Triunghi.","Quit." };//lista de cuvinte din meniu.
+               
+                int i = 0; //numarul liniei.
                 foreach (string word in keyWord)
                 {
                     i++;
                     Console.WriteLine(i + "." + word);
                 }
-                int keys = Convert.ToInt32(Console.ReadLine());
+                //afisarea meniului
+
+                int keys = Convert.ToInt32(Console.ReadLine());//selectam figura din meniu
                 ///Можно же сократить количество кода)
                 IFigure figure = null;
                 switch (keys)
                 {
                     case 1:
 	                    figure = new Rectangular();
-	                    break;
+                        break;
                     case 2:
 	                    figure = new Circle();
-                        break;
+                        break; 
                     case 3:
                         figure = new Square();
                         break;
@@ -49,8 +48,7 @@ namespace workToInterface
 
                 if (figure != null)
                 {
-	                figure.Area();
-	                figure.Perimeter();
+	                figure.WriteFigure();   
                 }
             } 
             
@@ -62,10 +60,20 @@ namespace workToInterface
 
             if(ok == "yes")
             {
+                Console.WriteLine("Cite figuri alegeti ?");
 
-                Menu();
-                Console.WriteLine("------Ati iesit din sistem----");
-                Console.WriteLine("------------------------------");
+                int NumberFigure = Convert.ToInt32(Console.ReadLine()); /// aici salvam numarul de figuri dat de utilizator.
+                if(NumberFigure > 0)
+                {
+                    Menu();
+                    Console.WriteLine("------Ati iesit din sistem----");
+                    Console.WriteLine("------------------------------");
+                }
+                else
+                {
+                    Console.WriteLine("0 tac 0 sa fie");
+                }
+                
             }
             else
             {

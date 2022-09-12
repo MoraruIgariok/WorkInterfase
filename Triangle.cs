@@ -65,5 +65,10 @@ namespace workToInterface
             Console.WriteLine("--------------------------------------");
             return 0;
         }
+
+        public void WriteFigure()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
