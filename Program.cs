@@ -7,7 +7,7 @@ namespace workToInterface
     internal class Program
     {
 
-        static void Menu(int n)
+        static void Menu()
         {
             bool forLoop = true;
              while (forLoop)
@@ -80,7 +80,7 @@ namespace workToInterface
                    
                 if (NumberFigure > 0)
                 {
-                    Menu(NumberFigure);                                     
+                    Menu();                                     
                 }
                 else
                 {
