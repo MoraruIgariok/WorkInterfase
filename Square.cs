@@ -28,7 +28,7 @@ namespace workToInterface
         public void WriteFigure()
         {
             Console.WriteLine("Aria patratului este {0}",Area());
-            Console.WriteLine("Perimetrul patratului este {0}),",Perimeter());
+            Console.WriteLine("Perimetrul patratului este {0}",Perimeter());
         }
     }
 }

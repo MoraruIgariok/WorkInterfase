@@ -1,10 +1,12 @@
   using System;
+using System.Collections;
 
 namespace workToInterface
 {
     internal class Program
     {
-        static void Menu()
+
+        static void Menu(int n)
         {
             bool forLoop = true;
              while (forLoop)
@@ -23,11 +25,15 @@ namespace workToInterface
 
                 int keys = Convert.ToInt32(Console.ReadLine());//selectam figura din meniu
                 ///Можно же сократить количество кода)
+                ///
+                var Ara_Prime = new ArrayList();
+
                 IFigure figure = null;
                 switch (keys)
                 {
                     case 1:
 	                    figure = new Rectangular();
+                        Ara_Prime.Add(figure);  
                         break;
                     case 2:
 	                    figure = new Circle();
@@ -45,10 +51,15 @@ namespace workToInterface
                         Console.WriteLine("Asa solutii nu avem, mai incercati");
                         break;
                 }
+                
 
                 if (figure != null)
                 {
-	                figure.WriteFigure();   
+                    foreach(int item in Ara_Prime)
+                    {
+                        item.Equals(figure);    
+                    }
+                                        
                 }
             } 
             
@@ -60,18 +71,19 @@ namespace workToInterface
 
             if(ok == "yes")
             {
+                 
                 Console.WriteLine("Cite figuri alegeti ?");
 
                 int NumberFigure = Convert.ToInt32(Console.ReadLine()); /// aici salvam numarul de figuri dat de utilizator.
-                if(NumberFigure > 0)
+                
+                   
+                if (NumberFigure > 0)
                 {
-                    Menu();
-                    Console.WriteLine("------Ati iesit din sistem----");
-                    Console.WriteLine("------------------------------");
+                    Menu(NumberFigure);                                     
                 }
                 else
                 {
-                    Console.WriteLine("0 tac 0 sa fie");
+                    Console.WriteLine("\"0\" tac \"0\" sa fie");
                 }
                 
             }
