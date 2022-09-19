@@ -13,29 +13,31 @@ namespace workToInterface
 			bool forLoop = true;
 					
 			Console.WriteLine("How many figures do you want to select ?? ");
-
 			int NumberFigure = Convert.ToInt32(Console.ReadLine());
+			
+			var listFigure = new List<IFigure>();                        //cream o lista pentru figurile noastre
 
 
-			while (forLoop) 
+			while (forLoop)
 			{
 				var figure = CreateFigure();
 
-				var listFigure = new List<IFigure>();
+				for(int i = 0; i < NumberFigure; i++)
+                {
+					listFigure.Add(CreateFigure());	
+                }
 				
-				for (int i = 0; i < NumberFigure; i++)
-				{
-					listFigure.Add(CreateFigure());
-				}
-
+				
+				
 				if (figure != null)
-					{				
-						foreach(IFigure item in listFigure)
-						{
-							Console.WriteLine("Aria {0},Perime {1}",item.Area(),item.Perimeter());
-						}
-					}
-					else
+				{
+					foreach (var item in listFigure)
+                    {
+						Console.WriteLine($"Aria pentru {figure.GetType().Name} este {item.Area()} si perimetrul {item.Perimeter()}");
+                    }	
+
+				}
+				else
 					{
 						forLoop = false;
 					}
@@ -44,9 +46,9 @@ namespace workToInterface
 
 		}
 
-		static IFigure CreateFigure()
-		{
-			Console.WriteLine("\nWhat figure do you select ?\n");
+
+		static void ItemMenu()
+        {
 			string[] keyWord = { "Dreptunghi.", "Cerc.", "Patrat.", "Triunghi.", "Exit" };
 			int i = 0;
 			foreach (string word in keyWord)
@@ -54,7 +56,14 @@ namespace workToInterface
 				i++;
 				Console.WriteLine(i + "." + word);
 			}
-						
+		}
+		static IFigure CreateFigure()
+		{
+
+			ItemMenu();
+
+
+			Console.Write("\nWhat figure do you select ? \n");
 			int keys = Convert.ToInt32(Console.ReadLine()); //option from menu
 
 				switch (keys)
@@ -73,7 +82,6 @@ namespace workToInterface
 						Console.WriteLine("Asa solutii nu avem, mai incercati");
 						return null;
 				}
-
 		}
 		static void Main(string[] args)
 		{
